@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillBars();
   initContactForm();
   initChartAnimation();
+  initGaugeAnimation();
 });
 
 /* ============================================================
@@ -551,6 +552,51 @@ function initChartAnimation() {
       bar.style.height = newPx + 'px';
     });
   }, 4000);
+}
+
+/* ============================================================
+   9.5. HERO GAUGE ANIMATION
+   ============================================================ */
+function initGaugeAnimation() {
+  const fillPath = document.getElementById('gauge-fill-path');
+  const valueNum = document.getElementById('gauge-value-num');
+  if (!fillPath || !valueNum) return;
+
+  const targetValue = 920; // Score out of 1000
+  const maxArc = 220; // Full stroke-dasharray length for radius 70 semi-circle
+  
+  // Calculate final dashoffset
+  const percent = targetValue / 1000;
+  const targetOffset = maxArc - (percent * maxArc);
+
+  // Set initial state
+  fillPath.style.strokeDasharray = `${maxArc}`;
+  fillPath.style.strokeDashoffset = `${maxArc}`;
+
+  // Animate path stroke-dashoffset after a short delay
+  setTimeout(() => {
+    fillPath.style.transition = 'stroke-dashoffset 2s cubic-bezier(0.16, 1, 0.3, 1)';
+    fillPath.style.strokeDashoffset = `${targetOffset}`;
+  }, 300);
+
+  // Animate counter value
+  const duration = 2000;
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3); // Ease out cubic
+    const current = Math.round(eased * targetValue);
+    
+    valueNum.textContent = current;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
 }
 
 /* ============================================================
