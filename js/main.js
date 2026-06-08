@@ -444,7 +444,7 @@ function initContactForm() {
       });
 
       if (response.ok) {
-        showToast('Message sent successfully! I\'ll get back to you soon. 🎉', 'success');
+        showToast('Thank you for reaching out! I\'ll get back to you soon.', 'success');
         form.reset();
       } else {
         throw new Error('Form submission failed');
@@ -458,7 +458,7 @@ function initContactForm() {
           <line x1="22" y1="2" x2="11" y2="13"/>
           <polygon points="22 2 15 22 11 13 2 9 22 2"/>
         </svg>
-        Send Message
+        Let's Connect
       `;
     }
   });

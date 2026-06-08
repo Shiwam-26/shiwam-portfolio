@@ -1516,7 +1516,7 @@ ul, ol {
 }
 
 .form-group {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xl);
 }
 
 .form-label {
@@ -1530,21 +1530,28 @@ ul, ol {
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 14px var(--space-lg);
+  padding: 16px var(--space-lg);
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: var(--text-base);
-  transition: var(--transition-fast);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
   outline: none;
+}
+
+.form-input:hover,
+.form-textarea:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
 }
 
 .form-input:focus,
 .form-textarea:focus {
+  background: var(--bg-secondary);
   border-color: var(--accent-purple);
-  box-shadow: 0 0 0 3px var(--accent-purple-dim);
+  box-shadow: 0 0 15px var(--border-glow), 0 0 0 1px var(--accent-purple);
 }
 
 .form-input::placeholder,
