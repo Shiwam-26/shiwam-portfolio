@@ -170,7 +170,7 @@ I'm **open to opportunities** — internships, freelance projects, collaboration
 
 | 📧 Email | 📱 Phone | 📍 Location |
 |---|---|---|
-| [shiwam808460@gmail.com](mailto:shiwam808460@gmail.com) | +91-8077624510 | Uttarakhand, India |
+| [shiwam808460@gmail.com](mailto:shiwam808460@gmail.com) | +91-8077624510 | Roorkee, Uttarakhand, India |
 
 ---
 
