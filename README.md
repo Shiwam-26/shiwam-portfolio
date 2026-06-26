@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Shiwam Kumar — Data Analyst
+#  Shiwam Kumar — Data Analyst
 
 ### **Transforming Raw Data into Actionable Business Insights**
 
