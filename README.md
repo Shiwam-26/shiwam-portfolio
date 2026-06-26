@@ -26,7 +26,7 @@ I specialize in turning messy, complex datasets into **clear, actionable insight
 
 | 📍 Location | 📧 Email | 📱 Phone | 🎓 Education |
 |---|---|---|---|
-| Uttarakhand, India | shiwam808460@gmail.com | +91-8077624510 | BCA — UTU, Dehradun |
+|Roorkee, Uttarakhand, India | shiwam808460@gmail.com | +91-8077624510 | BCA — UTU, Dehradun |
 
 ---
 
